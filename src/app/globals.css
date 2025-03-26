@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 41% 9%;
+    --foreground: 210 40% 98%;
+    --card: 230 45% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 45% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 163 100% 50%;  /* Lime Green Pop - #00FF88 */
+    --primary-foreground: 230 41% 9%;
+    --secondary: 265 100% 68%;  /* Electric Purple - #9B59FF */
+    --secondary-foreground: 230 41% 9%;
+    --muted: 230 25% 15%;
+    --muted-foreground: 210 20% 75%;
+    --accent: 300 100% 65%;  /* Bright Magenta - #FF4FFF */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 25%;
+    --input: 230 25% 25%;
+    --ring: 163 100% 50%;
+    --radius: 0.5rem;
+
+    /* Custom Colors */
+    --fluorescent-pink: 331 100% 59%;  /* #FF2DA0 */
+    --neon-blue: 195 100% 50%;  /* #00BFFF */
+    --electric-purple: 265 100% 68%;  /* #9B59FF */
+    --cyan-teal: 168 100% 50%;  /* #00FFD5 */
+    --bright-magenta: 300 100% 65%;  /* #FF4FFF */
+    --lime-green: 153 100% 50%;  /* #00FF88 */
+    --midnight: 230 41% 9%;  /* #0D0F1E */
+  }
+
+  /* Keep dark mode values the same */
+  .dark {
+    --background: 230 41% 9%;
+    --foreground: 210 40% 98%;
+    --card: 230 45% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 45% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 163 100% 50%;  /* Lime Green Pop - #00FF88 */
+    --primary-foreground: 230 41% 9%;
+    --secondary: 265 100% 68%;  /* Electric Purple - #9B59FF */
+    --secondary-foreground: 230 41% 9%;
+    --muted: 230 25% 15%;
+    --muted-foreground: 210 20% 75%;
+    --accent: 300 100% 65%;  /* Bright Magenta - #FF4FFF */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 25%;
+    --input: 230 25% 25%;
+    --ring: 163 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #0D0F1E; /* Midnight Background */
+  }
+}
+
+.chart-container {
+  background-color: #0D0F1E;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 133, 0.2); /* Subtle lime green border */
+  box-shadow: 0 0 10px rgba(0, 255, 133, 0.1); /* Subtle lime green glow */
+}
+
+.neon-text {
+  text-shadow: 0 0 5px rgba(0, 255, 133, 0.7), 0 0 10px rgba(0, 255, 133, 0.5);
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 5px rgba(255, 45, 160, 0.7), 0 0 10px rgba(255, 45, 160, 0.5);
+}
+
+.neon-text-purple {
+  text-shadow: 0 0 5px rgba(155, 89, 255, 0.7), 0 0 10px rgba(155, 89, 255, 0.5);
+}
+
+.neon-text-blue {
+  text-shadow: 0 0 5px rgba(0, 191, 255, 0.7), 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.neon-text-teal {
+  text-shadow: 0 0 5px rgba(0, 255, 213, 0.7), 0 0 10px rgba(0, 255, 213, 0.5);
+}
+
+.neon-text-magenta {
+  text-shadow: 0 0 5px rgba(255, 79, 255, 0.7), 0 0 10px rgba(255, 79, 255, 0.5);
+}
+
+.neon-box {
+  box-shadow: 0 0 5px rgba(0, 255, 133, 0.7), 0 0 10px rgba(0, 255, 133, 0.5);
+}
+
+.neon-box-pink {
+  box-shadow: 0 0 5px rgba(255, 45, 160, 0.7), 0 0 10px rgba(255, 45, 160, 0.5);
+}
+
+.neon-box-purple {
+  box-shadow: 0 0 5px rgba(155, 89, 255, 0.7), 0 0 10px rgba(155, 89, 255, 0.5);
+}
+
+.neon-border {
+  border: 1px solid rgba(0, 255, 133, 0.7);
+}
+
+.neon-gradient {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(13, 15, 30, 0.8));
+}
+
+.chart-line {
+  stroke: #00FF88;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.chart-grid {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1px;
+}
+
+.positive-value {
+  color: #00FF88; /* Lime Green Pop */
+}
+
+.negative-value {
+  color: #FF2DA0; /* Fluorescent Pink */
+}
+
+.btn-primary {
+  background-color: #00FF88; /* Lime Green Pop */
+  color: #0D0F1E;
+}
+
+.btn-secondary {
+  background-color: #9B59FF; /* Electric Purple */
+  color: #0D0F1E;
+}
+
+.btn-accent {
+  background-color: #FF4FFF; /* Bright Magenta */
+  color: #0D0F1E;
+}
