@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>TradingAnarchy.MultiMiner.Core</AssemblyName>
+    <RootNamespace>TradingAnarchy.MultiMiner.Core</RootNamespace>
+    <Description>Core library for Trading Anarchy Multi Miner - configuration, shared types, and foundational components</Description>
+  </PropertyGroup>
+
+</Project>

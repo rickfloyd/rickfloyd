@@ -1,0 +1,25 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <TieredPGO>true</TieredPGO>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Trading Anarchy Multi Miner Contributors</Authors>
+    <Company>Trading Anarchy</Company>
+    <Product>Trading Anarchy Multi Miner</Product>
+    <Copyright>Copyright © 2024 Trading Anarchy Multi Miner Contributors</Copyright>
+    <PackageProjectUrl>https://github.com/rickfloyd/rickfloyd</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rickfloyd/rickfloyd</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+
+</Project>

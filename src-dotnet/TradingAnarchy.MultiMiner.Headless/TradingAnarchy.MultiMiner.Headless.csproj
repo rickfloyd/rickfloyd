@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>TradingAnarchy.MultiMiner.Headless</AssemblyName>
+    <RootNamespace>TradingAnarchy.MultiMiner.Headless</RootNamespace>
+    <Description>Headless console runtime for Trading Anarchy Multi Miner</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradingAnarchy.MultiMiner.Core\TradingAnarchy.MultiMiner.Core.csproj" />
+    <ProjectReference Include="..\TradingAnarchy.MultiMiner.Backends\TradingAnarchy.MultiMiner.Backends.csproj" />
+  </ItemGroup>
+
+</Project>
