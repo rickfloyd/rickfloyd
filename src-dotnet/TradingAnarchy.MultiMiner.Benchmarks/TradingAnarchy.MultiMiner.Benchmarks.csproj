@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>TradingAnarchy.MultiMiner.Benchmarks</AssemblyName>
+    <RootNamespace>TradingAnarchy.MultiMiner.Benchmarks</RootNamespace>
+    <Description>Performance benchmarks for Trading Anarchy Multi Miner components</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradingAnarchy.MultiMiner.Core\TradingAnarchy.MultiMiner.Core.csproj" />
+    <ProjectReference Include="..\TradingAnarchy.MultiMiner.Backends\TradingAnarchy.MultiMiner.Backends.csproj" />
+  </ItemGroup>
+
+</Project>

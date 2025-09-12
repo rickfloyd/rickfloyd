@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trading Anarchy Multi Miner
 
-## Getting Started
+**Phase 0–1 Bootstrap**: Modern .NET 8 foundation for cryptocurrency mining automation and profitability optimization.
 
-First, run the development server:
+## Overview
 
+Trading Anarchy Multi Miner is a modernized evolution of cryptocurrency mining software, built on .NET 8 with a focus on performance, security, and maintainability. This repository represents a phased modernization approach, starting with foundational infrastructure and gradually building toward full mining automation capabilities.
+
+**Current Status**: Phase 0–1 (Foundation Bootstrap) - Basic project structure and governance established.
+
+## Architecture
+
+- **Core Library** (`TradingAnarchy.MultiMiner.Core`): Configuration management, shared types, and foundational components
+- **Backend Abstraction** (`TradingAnarchy.MultiMiner.Backends`): Mining engine abstractions (future: BFGMiner, CGMiner integration)
+- **Headless Runtime** (`TradingAnarchy.MultiMiner.Headless`): Console-based mining automation runtime
+- **Benchmarks** (`TradingAnarchy.MultiMiner.Benchmarks`): Performance testing and optimization tools
+
+## Quick Start
+
+### Prerequisites
+- .NET 8 SDK or later
+- Compatible mining hardware (GPU/ASIC) for production use
+
+### Building
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+dotnet build TradingAnarchy.MultiMiner.sln
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running (Bootstrap Mode)
+```bash
+dotnet run --project src-dotnet/TradingAnarchy.MultiMiner.Headless
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Attribution
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project builds upon and is inspired by the original [MultiMiner](https://github.com/nwoolls/MultiMiner) project by Nathanial Woolls, licensed under MIT. We gratefully acknowledge the foundational work that has made this modernization possible.
 
-## Learn More
+## Documentation
 
-To learn more about Next.js, take a look at the following resources:
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Development Roadmap](ROADMAP.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development Status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This is an active development project following a phased approach. See [ROADMAP.md](ROADMAP.md) for detailed phase planning and [Contributing Guidelines](CONTRIBUTING.md) for development workflow.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - see [LICENSE](LICENSE) for details. Includes attribution to original MultiMiner project.

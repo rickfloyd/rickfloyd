@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# .NET
+bin/
+obj/
+artifacts/
+publish/
+BenchmarkDotNet.Artifacts/
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
