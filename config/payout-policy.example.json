@@ -1,0 +1,88 @@
+{
+  "payoutPolicy": {
+    "minimumPayoutThreshold": {
+      "BTC": "10000",
+      "LTC": "100000", 
+      "DOGE": "100000000",
+      "XMR": "10000000000",
+      "KAS": "100000000",
+      "ERG": "1000000000",
+      "RVN": "100000000"
+    },
+    "maxPayoutsPerBatch": 50,
+    "batchIntervalHours": 24,
+    "reservePercentage": 5,
+    "emergencyStopEnabled": true,
+    "allowPartialPayouts": false,
+    "defaultPriority": "normal"
+  },
+  "strategies": {
+    "direct": {
+      "enabled": true,
+      "description": "Immediate payouts without accumulation",
+      "assets": ["BTC", "LTC", "DOGE"],
+      "maxConcurrentPayouts": 10
+    },
+    "thresholdBatch": {
+      "enabled": true,
+      "description": "Accumulate until threshold, then batch payout",
+      "assets": ["XMR", "KAS", "ERG", "RVN"],
+      "batchSize": 25,
+      "maxAccumulationDays": 7
+    }
+  },
+  "eligibilityScoring": {
+    "weights": {
+      "liquidity": 0.35,
+      "adoption": 0.30,
+      "networkStability": 0.25,
+      "privacy": 0.10
+    },
+    "minimumScore": 60,
+    "requireAllCriteria": false
+  },
+  "charityAllocation": {
+    "method": "equal",
+    "description": "Equal distribution among eligible charities",
+    "fallbackMethod": "weighted",
+    "weightingFactors": {
+      "donationHistory": 0.4,
+      "verificationStatus": 0.3,
+      "activityLevel": 0.3
+    }
+  },
+  "riskManagement": {
+    "maxDailyPayoutUsd": 50000,
+    "maxSinglePayoutUsd": 5000,
+    "requiredConfirmations": {
+      "BTC": 6,
+      "LTC": 6,
+      "DOGE": 6,
+      "XMR": 10,
+      "KAS": 10,
+      "ERG": 6,
+      "RVN": 6
+    },
+    "addressWhitelist": {
+      "enabled": false,
+      "enforceForLargePayouts": true,
+      "largePayoutThresholdUsd": 1000
+    }
+  },
+  "monitoring": {
+    "enableLedgerIntegrityChecks": true,
+    "integrityCheckIntervalHours": 6,
+    "alertOnFailedPayouts": true,
+    "alertOnHighFailureRate": true,
+    "failureRateThresholdPercent": 10,
+    "enableMetrics": true,
+    "metricsRetentionDays": 30
+  },
+  "backup": {
+    "enableAutomaticBackup": true,
+    "backupIntervalHours": 12,
+    "retainBackupDays": 90,
+    "backupLocation": "./backups/ledger",
+    "compressionEnabled": true
+  }
+}

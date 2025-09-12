@@ -1,0 +1,66 @@
+{
+  "priceFeedSources": {
+    "primary": "coingecko",
+    "fallback": "cryptocompare"
+  },
+  "assetMappings": {
+    "BTC": {
+      "coingecko": "bitcoin",
+      "cryptocompare": "BTC",
+      "displayName": "Bitcoin"
+    },
+    "LTC": {
+      "coingecko": "litecoin", 
+      "cryptocompare": "LTC",
+      "displayName": "Litecoin"
+    },
+    "DOGE": {
+      "coingecko": "dogecoin",
+      "cryptocompare": "DOGE", 
+      "displayName": "Dogecoin"
+    },
+    "XMR": {
+      "coingecko": "monero",
+      "cryptocompare": "XMR",
+      "displayName": "Monero"
+    },
+    "KAS": {
+      "coingecko": "kaspa",
+      "cryptocompare": "KAS",
+      "displayName": "Kaspa"
+    },
+    "ERG": {
+      "coingecko": "ergo",
+      "cryptocompare": "ERG",
+      "displayName": "Ergo"
+    },
+    "RVN": {
+      "coingecko": "ravencoin",
+      "cryptocompare": "RVN",
+      "displayName": "Ravencoin"
+    }
+  },
+  "cacheSettings": {
+    "ttlSeconds": 300,
+    "maxRetries": 3,
+    "retryDelayMs": 1000
+  },
+  "endpoints": {
+    "coingecko": {
+      "baseUrl": "https://api.coingecko.com/api/v3",
+      "priceEndpoint": "/simple/price",
+      "rateLimit": {
+        "requestsPerMinute": 50,
+        "requestsPerHour": 1000
+      }
+    },
+    "cryptocompare": {
+      "baseUrl": "https://api.cryptocompare.com/data",
+      "priceEndpoint": "/price",
+      "rateLimit": {
+        "requestsPerMinute": 100,
+        "requestsPerHour": 10000
+      }
+    }
+  }
+}
