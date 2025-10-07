@@ -2,7 +2,7 @@ import {
   CoinGeckoQuoteSource,
   CryptoCompareQuoteSource,
   CachedPriceFeed
-} from '../../../src/infrastructure/pricing';
+} from '../../src/infrastructure/pricing';
 import { SupportedAsset } from '../../../src/domain/assets';
 import { IQuoteSource } from '../../../src/domain/pricing';
 
